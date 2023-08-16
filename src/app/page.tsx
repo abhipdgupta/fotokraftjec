@@ -126,19 +126,19 @@ export default function Home() {
           z-20
         "
         >
-          <span className=" m-4 outline outline-2  rounded-full cursor-pointer   ">
+          <span className=" m-4 outline outline-2 outline-white rounded-full cursor-pointer   ">
             <Link target="_blank" href={"https://instagram.com"}>
-              <Instagram className="w-6 h-6 m-3 hover:scale-125  hover:text-pink-400 transition-all" />
+              <Instagram className="w-6 h-6 m-3 hover:scale-125 text-white hover:text-pink-400 transition-all" />
             </Link>
           </span>
-          <span className=" m-4 outline  outline-2 rounded-full cursor-pointer">
+          <span className=" m-4 outline  outline-2 outline-white rounded-full cursor-pointer">
             <Link target="_blank" href={"https://youtube.com"}>
-              <Youtube className="w-6 h-6 m-3 hover:scale-125  hover:text-red-500 transition-all" />
+              <Youtube className="w-6 h-6 m-3 hover:scale-125 text-white hover:text-red-500 transition-all" />
             </Link>
           </span>
-          <span className=" m-4 outline outline-2 rounded-full cursor-pointer ">
+          <span className=" m-4 outline outline-2 outline-white rounded-full cursor-pointer ">
             <Link target="_blank" href={"https://facebook.com"}>
-              <Facebook className="w-6 h-6 m-3 hover:scale-125  hover:text-blue-500 transition-all" />
+              <Facebook className="w-6 h-6 m-3 hover:scale-125  text-white hover:text-blue-500 transition-all" />
             </Link>
           </span>
         </section>
