@@ -8,9 +8,11 @@ module.exports = {
     "./src/**/*.{ts,tsx}",
   ],
   theme: {
+  
     backgroundSize: {
       "300%": "200%",
     },
+    
     container: {
       center: true,
       padding: "2rem",

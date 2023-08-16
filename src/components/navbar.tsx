@@ -39,11 +39,11 @@ export default function Navbar() {
 
 function NavItem({ children, to }: { children: React.ReactNode; to: string }) {
   return (
-    <Link
+    <a
       href={to}
       className="hover:text-xl text-slate-200   cursor-pointer transition-all"
     >
       {children}
-    </Link>
+    </a>
   );
 }
