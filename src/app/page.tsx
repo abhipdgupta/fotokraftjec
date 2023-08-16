@@ -5,9 +5,10 @@ import { ScrollTrigger } from "gsap/all";
 import Navbar from "@/components/navbar";
 import Link from "next/link";
 import { Instagram, Youtube, Facebook } from "lucide-react";
-import { usePathname } from "next/navigation";
+import loaderlogic from "@/components/loaderlogic";
 
 export default function Home() {
+  
   const section1 = useRef(null);
   const section2 = useRef(null);
   const camera = useRef(null);
@@ -82,7 +83,7 @@ export default function Home() {
       // @ts-ignore
       about.current?.children,
       { opacity: 0 },
-      { opacity: 1, duration: 5, stagger: 0.9,pin:true }
+      { opacity: 1, duration: 5, stagger: 0.9 }
     );
   }, []);
 
@@ -102,7 +103,7 @@ export default function Home() {
       trigger:evenChildNodes as any,
       start:"top center",
       scrub:5,
-      markers:true,
+      // markers:true,
 
     }})
     // @ts-ignore
@@ -110,13 +111,14 @@ export default function Home() {
       trigger:oddChildNodes as any,
       start:"top center",
       scrub:5,
-      markers:true,
+      // markers:true,
 
     }})
 
   },[])
   return (
     <>
+      
       <Navbar />
       <div className="min-h-screen overflow-y-scroll no-scrollbar scroll-smooth bg-slate-950 overflow-hidden">
         {/* Socials */}
