@@ -97,21 +97,22 @@ export default function Home() {
     const evenChildNodes = Array.from(childNodes).filter((_, index) => index % 2 === 0);
     const oddChildNodes = Array.from(childNodes).filter((_, index) => index % 2 !== 0);
 
-    let viewWidth=window.innerWidth
     //@ts-ignore
-    gsap.fromTo(evenChildNodes,{x:viewWidth+300},{x:viewWidth-300-evenChildNodes[0].offsetWidth,stagger:0.5,scrollTrigger:{
+    gsap.fromTo(evenChildNodes,{x:section3.current.offsetWidth-evenChildNodes[0].offsetWidth/2},{x:section3.current.offsetWidth -3/2*evenChildNodes[0].offsetWidth,stagger:0.5,scrollTrigger:{
       trigger:evenChildNodes as any,
-      start:"top center",
-      scrub:5,
-      // markers:true,
+      start:"top bottom",
+      end:"bottom center",
+      scrub:1,
+      markers:true,
 
     }})
     // @ts-ignore
-    gsap.fromTo(oddChildNodes,{x:-300-oddChildNodes[0].offsetWidth},{x:100,stagger:0.5,scrollTrigger:{
+    gsap.fromTo(oddChildNodes,{x:-oddChildNodes[0].offsetWidth/2},{x:oddChildNodes[0].offsetWidth/2,stagger:0.5,scrollTrigger:{
       trigger:oddChildNodes as any,
-      start:"top center",
-      scrub:5,
-      // markers:true,
+      start:"top bottom",
+      end:"bottom center",
+      scrub:1,
+      markers:true,
 
     }})
 
