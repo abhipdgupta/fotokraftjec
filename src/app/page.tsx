@@ -67,23 +67,23 @@ export default function Home() {
     let t2 = gsap.timeline({
       scrollTrigger: {
         trigger: about.current,
-        start: 300,
+        start: "top bottom",
         end: "bottom bottom",
-        scrub: 1,
+        scrub: .3,
       },
     });
 
     t2.fromTo(
       section2.current,
       { x: "100%", },
-      { x: 0, duration: 5, ease: "slow(0.7, 0.7, false)" }
+      { x: "0%", }
     );
   
     t2.fromTo(
       // @ts-ignore
       about.current?.children,
       { opacity: 0 },
-      { opacity: 1, duration: 5, stagger: 0.9 }
+      { opacity: 1 }
     );
   }, []);
 
