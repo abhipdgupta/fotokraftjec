@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Loaderlogic from "@/components/loaderlogic";
+import Leniswrapper from "@/components/leniswrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} max-w-full overflow-x-hidden`}>
-        <Loaderlogic>{children}</Loaderlogic>
+        <Loaderlogic>
+          <Leniswrapper>{children}</Leniswrapper>
+        </Loaderlogic>
       </body>
     </html>
   );
