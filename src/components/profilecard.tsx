@@ -36,7 +36,7 @@ export function ProfileCard({
     const state=Flip.getState(flipref.current)
    
       // @ts-ignore
-    Flip.to(state,{rotateY:-90, ease:"SloMo",duration:.8,})
+    Flip.to(state,{rotateY:-90, ease:"power0.easeNone",duration:.5,})
     
 
     // setTimeout(() => {
@@ -44,15 +44,15 @@ export function ProfileCard({
     // }, 1000);
   }
   return (
-    <Card ref={flipref} className="w-80 h-[500px] snap-center bg-slate-900 ">
+    <Card ref={flipref} className="min-w-80 min-h-[500px] snap-center bg-slate-900 ">
       <CardHeader>
-        <CardTitle className="text-white">{name}</CardTitle>
-        <CardDescription className="text-slate-400">
+        <CardTitle className="text-white text-xl">{name}</CardTitle>
+        <CardDescription className="text-slate-400 text-sm">
           {description}
         </CardDescription>
       </CardHeader>
       {!showMessage ? (
-        <CardContent className="rounded-xl overflow-hidden w-72 h-80">
+        <CardContent className=" rounded-xl overflow-hidden m-4 w-64 h-80">
           <img
             className="w-full h-full object-cover"
             src={imagePath}
@@ -60,7 +60,7 @@ export function ProfileCard({
           />
         </CardContent>
       ) : (
-        <CardContent className="rounded-xl overflow-hidden text-white p-4 w-72 h-80">
+        <CardContent className=" rounded-xl overflow-hidden m-4 w-64 h-80 text-slate-300">
           {/* @ts-ignore */}
           {messages[name]}
         </CardContent>

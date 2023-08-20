@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
-import { ScrollToPlugin, ScrollTrigger,Flip } from "gsap/all";
+import { ScrollToPlugin, ScrollTrigger,Flip ,Draggable} from "gsap/all";
 
 import Navbar from "@/components/navbar";
 import Hero from "@/components/sections/hero";
@@ -11,7 +11,7 @@ import Joinform from "@/components/sections/joinform";
 import Leads from "@/components/sections/leads";
 
 export default function Home() {
-  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin,Flip);
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin,Flip,Draggable);
 
 
   return (
