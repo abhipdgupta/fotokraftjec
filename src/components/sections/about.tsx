@@ -11,8 +11,8 @@ export default function About() {
     let t2 = gsap.timeline({
       scrollTrigger: {
         trigger: about.current,
-        start: "top bottom",
-        end: "bottom bottom",
+        start: "top 80%",
+        end: "bottom 80%",
         scrub: 0.3,
       },
     });
@@ -23,14 +23,14 @@ export default function About() {
       // @ts-ignore
       about.current?.children,
       { opacity: 0 },
-      { opacity: 1 }
+      { opacity: 1 ,stagger:0.1,delay:1}
     );
   }, []);
   return (
     <>
       <section
         id="about"
-        className=" min-h-screen relative container p-12 w-full
+        className=" min-h-screen relative container md:p-12 p-4 w-full
           flex items-center overflow-hidden"
         ref={section2}
       >

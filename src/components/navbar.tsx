@@ -33,7 +33,7 @@ export default function Navbar() {
       className=" w-full flex items-center justify-around h-20 fixed z-10"
     >
       <NavItem to="#home">
-        {" "}
+
         <img
           src="/Fotokraft 1.svg"
           className="w-10 object-scale-down"
@@ -48,7 +48,7 @@ export default function Navbar() {
         <NavItem to="#gallery">Gallery</NavItem>
         <NavItem to="#join-club">Join?</NavItem>
         <NavItem to="#about">About</NavItem>
-        <NavItem to="#alumni">Alumni</NavItem>
+        <NavItem to="#leads">Leads</NavItem>
       </div>
     </nav>
   );

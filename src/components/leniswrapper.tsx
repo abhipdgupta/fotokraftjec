@@ -11,6 +11,8 @@ export default function Leniswrapper({
   children: React.ReactNode;
 }) {
   const lenis = new Lenis({});
+  console.log("hi");
+  
   useEffect(() => {
     lenis.on("scroll", ScrollTrigger.update);
 

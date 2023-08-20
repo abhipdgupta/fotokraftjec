@@ -23,7 +23,7 @@ export default function Hero() {
       { x: "30%", ease: "Power3.easeOut", duration: 1 }
     );
     t1.to(camera.current, { scale: 1.3 });
-    t1.to(camera.current, { rotate: 90, x: "4%", duration: 0.3 });
+    t1.fromTo(camera.current,{rotate:-90}, {rotate:0, x: "4%", duration: 0.3 });
     t1.to(camera.current, { y: "30%" });
 
     t1.fromTo(maintext.current, { y: 0, opacity: 0 }, { y: -100, opacity: 1 });
@@ -92,12 +92,12 @@ export default function Hero() {
         ref={subtext}
         className="absolute z-10 font-extrabold text-xs text-gray-300 lg:tracking-[.4rem] cursor-pointer"
       >
-        <Link href={"https://jecassam.ac.in"} target="_blank">
+        <Link href={"https://jecassam.ac.in/student-activity/fotokraft/"} target="_blank">
           .Jorhat Engineering College.
         </Link>
       </span>
-      <div ref={camera} className="drop-shadow-2xl mix-blend-plus-lighter">
-        <img src="/camera_10.png" className="object-cove -rotate-90 " alt="" />
+      <div ref={camera} className="">
+        <img src="/camera_10.png" className="object-cove  " alt="" />
       </div>
     </section>
     </>
