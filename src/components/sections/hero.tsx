@@ -40,7 +40,7 @@ export default function Hero() {
         trigger: section1.current,
         start: "bottom 80%",
         end: "bottom 30%",
-        scrub: 0.3,
+        scrub: 1,
         // markers:true
       },
     });
@@ -81,7 +81,7 @@ export default function Hero() {
         ref={maintext}
         className="
       bg-gradient-to-r from-amber-400 via-slate-300 to-red-600 bg-clip-text
-      absolute z-2  text-3xl md:text-6xl lg:text-9xl text-transparent bg-300% animate-gradient font-extrabold drop-shadow-2xl"
+      absolute z-2  text-5xl md:text-6xl lg:text-9xl text-transparent bg-300% animate-gradient font-extrabold drop-shadow-2xl"
       >
         <span className="text-[8px]  lg:text-sm text-slate-400 absolute -top-5 left-1 ">
           estd 18-04-2012

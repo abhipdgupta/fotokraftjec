@@ -9,21 +9,23 @@ export default function About() {
 
   useEffect(() => {
     let t2 = gsap.timeline({
+      
       scrollTrigger: {
         trigger: about.current,
-        start: "top 80%",
-        end: "bottom 80%",
-        scrub: 0.3,
+        start: "top bottom",
+        end: "bottom bottom",
+        scrub: 1,
+        
       },
     });
 
-    t2.fromTo(about.current, { x: "100%" }, { x: "0%" });
+    t2.fromTo(about.current, { x: "100%",ease:"Power0.easeNone" }, { x: "0%"});
 
     t2.fromTo(
       // @ts-ignore
       about.current?.children,
       { opacity: 0 },
-      { opacity: 1 ,stagger:0.1,delay:1}
+      { opacity: 1 ,stagger:0.1,}
     );
   }, []);
   return (

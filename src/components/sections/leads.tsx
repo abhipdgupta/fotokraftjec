@@ -15,14 +15,16 @@ export default function Leads() {
       const t1=gsap.timeline({
         scrollTrigger:{
           trigger:profileRef.current,
-          start:"top 80%",
-          end:"bottom bottom",
-          scrub:true,
+          start:"top 70%",
+          end:"bottom 80%",
+          scrub:2,
+       
+         
         }
       })
 
-      t1.fromTo(lead.current,{opacity:0},{opacity:1})
-      t1.fromTo(children,{scale:0,opacity:0},{scale:1, opacity:1,stagger:0.1})
+      t1.fromTo(lead.current,{scale:3},{scale:1})
+      t1.fromTo(children,{scale:0,opacity:0},{scale:1, opacity:1  })
 
     }, [])
     
