@@ -20,9 +20,9 @@ export default function Home() {
   const [height, setheight] = useState(0);
   useEffect(() => {
     if (heightref.current) {
-      const newHeight = heightref.current.clientHeight;
+      const newHeight = heightref.current.offsetHeight;
       setheight(newHeight);
-      console.log("refreshing...scroll trigger");
+      console.log("refreshing...scroll trigger",height);
       ScrollTrigger.refresh();
     }
     
