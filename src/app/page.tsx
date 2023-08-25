@@ -22,8 +22,10 @@ export default function Home() {
     if (heightref.current) {
       const newHeight = heightref.current.clientHeight;
       setheight(newHeight);
+      console.log("refreshing...scroll trigger");
+      ScrollTrigger.refresh();
     }
-    ScrollTrigger.refresh();
+    
   }, [height]);
 
   return (

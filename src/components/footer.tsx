@@ -11,7 +11,7 @@ export default function Footer() {
       </div>
       <div className="flex flex-col">
         <span> Developed by </span>
-        <span>Abhishek Prasad Gupta, CSE &apos 24 JEC</span>
+        <span>Abhishek Prasad Gupta, CSE 24 JEC</span>
         <span className="flex gap-4 ">
           <Link href="https://github.com/abhipdgupta" target="_blank">
             <GithubIcon />
