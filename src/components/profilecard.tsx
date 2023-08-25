@@ -49,7 +49,7 @@ export function ProfileCard({
   return (
     <Card
       ref={flipref}
-      className="min-w-80 min-h-[500px] snap-center bg-slate-900 "
+      className="min-w-80 min-h-[500px] snap-center bg-cyan-900 border-gray-500 bg-opacity-40 "
     >
       <CardHeader>
         <CardTitle className="text-white text-xl">{name}</CardTitle>

@@ -40,6 +40,7 @@ export default function Navbar() {
           alt="Fotokraft logo"
         />
       </NavItem>
+      
       <div
         ref={navref2}
         className="flex items-center justify-evenly gap-6 h-full"
@@ -50,6 +51,14 @@ export default function Navbar() {
         <NavItem to="#about">About</NavItem>
         <NavItem to="#leads">Leads</NavItem>
       </div>
+      <NavItem to="#home">
+
+        <img
+          src="/JEC_logo_.png"
+          className="w-10 object-scale-down"
+          alt="jec logo"
+        />
+      </NavItem>
     </nav>
   );
 }
@@ -64,11 +73,11 @@ function NavItem({ children, to }: { children: React.ReactNode; to: string }) {
     });
   };
   return (
-    <span
+    <button
       onClick={() => scrollanimate(to)}
       className="hover:text-xl text-slate-200   cursor-pointer transition-all"
     >
       {children}
-    </span>
+    </button>
   );
 }

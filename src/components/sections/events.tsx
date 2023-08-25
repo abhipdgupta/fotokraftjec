@@ -4,8 +4,7 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import EventsList from "@/lib/eventsLists";
 import Link from "next/link";
-import { ScrollTrigger } from "gsap/all";
-import { forEachChild } from "typescript";
+import { ExternalLink } from "lucide-react";
 export default function Events() {
   const section3 = useRef<HTMLDivElement>(null);
   const yr1 = useRef<HTMLDivElement>(null);
@@ -30,12 +29,15 @@ export default function Events() {
         { x: "-10%", opacity: 0 },
         {
           x: "0%",
+          duration:1,
           opacity: 1,
           scrollTrigger: {
             trigger: element,
-            start: "top 90%",
+            start: "top 80%",
             end: "bottom 80%",
-            scrub: 1,
+            scrub: false,
+            toggleActions:"play none none reverse"
+            // markers:true
           },
         }
       );
@@ -46,12 +48,15 @@ export default function Events() {
         { x: "10%", opacity: 0 },
         {
           x: "0%",
+          duration:1,
           opacity: 1,
           scrollTrigger: {
             trigger: element,
-            start: "top 90%",
+            start: "top 80%",
             end: "bottom 80%",
-            scrub: 1,
+            scrub: false,
+            toggleActions:"play none none reverse"
+            // markers:true
           },
         }
       );
@@ -73,16 +78,20 @@ export default function Events() {
     yr2odd.forEach((element: any) => {
       gsap.fromTo(
         element,
-        { x: "-10%", opacity: 0 },
+        { y: "30%", opacity: 0 },
         {
-          x: "0%",
+          y: "0%",
           opacity: 1,
+          duration:1,
           scrollTrigger: {
             trigger: element,
             start: "top 80%",
-            end: "bottom 30%",
-            scrub: 1,
+            end: "bottom 80%",
+            scrub: false,
+            toggleActions:"play none none reverse"
+            // markers:true
           },
+          
         }
       );
     });
@@ -90,15 +99,18 @@ export default function Events() {
     yr2even.forEach((element: any) => {
       gsap.fromTo(
         element,
-        { x: "10%", opacity: 0 },
+        { y: "30%", opacity: 0 },
         {
-          x: "0%",
+          y: "0%",
           opacity: 1,
+          duration:1,
           scrollTrigger: {
             trigger: element,
             start: "top 80%",
-            end: "bottom 50%",
-            scrub: 1,
+            end: "bottom 80%",
+            scrub: false,
+            toggleActions:"play none none reverse"
+            // markers:true
           },
         }
       );
@@ -115,8 +127,9 @@ export default function Events() {
         scrollTrigger: {
           trigger: heroyr1.current,
           start: "top center",
-          end: "bottom 90%",
-          scrub: 2,
+          end: "bottom center",
+          scrub: false,
+          toggleActions:"play none none reverse"
           // markers: true,
         },
       }
@@ -130,8 +143,9 @@ export default function Events() {
         scrollTrigger: {
           trigger: heroyr2.current,
           start: "top center",
-          end: "bottom 90%",
-          scrub: 2,
+          end: "bottom center",
+          scrub: false,
+          toggleActions:"play none none reverse"
           // markers: true,
         },
       }
@@ -145,8 +159,8 @@ export default function Events() {
         id="events"
         className="min-h-screen py-16 container overflow-hidden "
       >
-        <div ref={heroyr1} className="relative h-screen container ">
-          <h1 className="absolute lg:text-9xl text-6xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+        <div ref={heroyr1} className="relative h-screen container text-white ">
+          <h1 className="absolute lg:text-9xl md:text-6xl text-3xl lg:font-extralight font-bold top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
             Year 2023
           </h1>
           <img
@@ -155,20 +169,30 @@ export default function Events() {
             alt=""
           />
         </div>
-        <div ref={yr1} className="py-12">
+        <div ref={yr1} className="py-12 max-w-6xl mx-auto">
           {EventsList.yr2023.map((evn, index) => (
             <div
               key={index}
-              className={`flex lg:flex-row flex-col-reverse items-center gap-8 lg:justify-end justify-center ${
-                index % 2 == 0 ? "lg:flex-row-reverse" : ""
-              }`}
+              className={`flex md:flex-row flex-col-reverse items-center  md:items-center gap-8 md:justify-end
+             md:my-4 my-12   
+             ${index % 2 == 0 ? "md:flex-row-reverse" : ""}`}
             >
               <div
-                className={`${index % 2 != 0 ? "lg:text-end" : "text-start"} `}
+                className={`w-full ${
+                  index % 2 != 0 ? "md:text-end" : "text-start"
+                }  `}
               >
-                <h1>{evn.name}</h1>
-                <h3>{evn.description}</h3>
-                <Link href={evn.album}>Check Out the Album...</Link>
+                <div
+                  className={`font-semibold flex gap-4 text-3xl items-center
+               ${index % 2 != 0 ? "md:flex-row-reverse" : ""}
+               `}
+                >
+                  <h1>{evn.name}</h1>
+                  <Link href={evn.album} target="_blank">
+                    <ExternalLink className="w-full h-full" />
+                  </Link>
+                </div>
+                <h3 className="text-slate-300">{evn.description}</h3>
               </div>
               <div className="w-96">
                 <img
@@ -181,8 +205,8 @@ export default function Events() {
           ))}
         </div>
 
-        <div ref={heroyr2} className=" relative h-screen container ">
-          <h1 className="absolute lg:text-9xl text-6xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+        <div ref={heroyr2} className=" relative h-screen container text-white ">
+          <h1 className="absolute lg:text-9xl md:text-6xl text-3xl lg:font-extralight font-bold top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
             Year 2022
           </h1>
           <img
@@ -191,29 +215,39 @@ export default function Events() {
             alt=""
           />
         </div>
-        <div ref={yr2} className="py-12"> 
+        <div ref={yr2} className="py-12 max-w-6xl mx-auto">
           {EventsList.yr2022.map((evn, index) => (
             <div
-              key={index}
-              className={`flex lg:flex-row flex-col-reverse items-center gap-8 lg:justify-end justify-center ${
-                index % 2 == 0 ? "lg:flex-row-reverse" : ""
-              }`}
+            key={index}
+            className={`flex md:flex-row flex-col-reverse items-center  md:items-center gap-8 md:justify-end
+           md:my-4 my-12   
+           ${index % 2 == 0 ? "md:flex-row-reverse" : ""}`}
+          >
+            <div
+              className={`w-full ${
+                index % 2 != 0 ? "md:text-end" : "text-start"
+              }  `}
             >
               <div
-                className={`${index % 2 != 0 ? "lg:text-end" : "text-start"}`}
+                className={`font-semibold flex gap-4 text-3xl items-center
+             ${index % 2 != 0 ? "md:flex-row-reverse" : ""}
+             `}
               >
                 <h1>{evn.name}</h1>
-                <h3>{evn.description}</h3>
-                <Link href={evn.album}>Check Out the Album...</Link>
+                <Link href={evn.album} target="_blank">
+                  <ExternalLink className="w-full h-full" />
+                </Link>
               </div>
-              <div className="w-96">
-                <img
-                  src={evn.thumbnail}
-                  alt={evn.name}
-                  className="aspect-video object-cover rounded-md"
-                />
-              </div>
+              <h3 className="text-slate-300">{evn.description}</h3>
             </div>
+            <div className="w-96">
+              <img
+                src={evn.thumbnail}
+                alt={evn.name}
+                className="aspect-video object-cover rounded-md"
+              />
+            </div>
+          </div>
           ))}
         </div>
       </section>
