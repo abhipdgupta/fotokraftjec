@@ -19,26 +19,26 @@ export default function Home() {
 
   const [height,setHeight]=useState(0);
 
-  useEffect(()=>{
+//   useEffect(()=>{
 
-    console.log("height",height);
-    console.log("heightref",heightref.current?.offsetHeight);
+//     console.log("height",height);
+//     console.log("heightref",heightref.current?.offsetHeight);
     
     
-    if(heightref.current){
+//     if(heightref.current){
         
 
-        if(height<heightref.current?.offsetHeight){
-            ScrollTrigger.refresh();
-            console.log("scrollTrigger refreshing...");
-            setHeight(heightref.current?.offsetHeight)
+//         if(height<heightref.current?.offsetHeight){
+//             ScrollTrigger.refresh();
+//             console.log("scrollTrigger refreshing...");
+//             setHeight(heightref.current?.offsetHeight)
             
-        }
-    }
+//         }
+//     }
 
    
 
-  },[height])
+//   },[height])
 
     
 

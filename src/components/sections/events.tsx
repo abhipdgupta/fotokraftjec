@@ -153,21 +153,12 @@ export default function Events() {
     );
   }, []);
 
-//   useEffect(()=>{
-//     const t=setInterval(()=>{
-//         ScrollTrigger.refresh()
-//     },2000)
-
-//     return ()=>{
-//         clearInterval(t)
-//     }
-//   },[section3.current])
   return (
     <>
       <section
         ref={section3}
         id="events"
-        className="min-h-screen py-16 container overflow-hidden "
+        className="min-h-screen py-16 container "
       >
         <div ref={heroyr1} className="relative h-screen container text-white ">
           <h1 className="absolute lg:text-9xl md:text-6xl text-3xl lg:font-extralight font-bold top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
@@ -184,7 +175,7 @@ export default function Events() {
             <div
               key={index}
               className={`flex md:flex-row flex-col-reverse items-center  md:items-center gap-8 md:justify-end
-             md:my-4 my-12   
+             md:my-4 my-12  md:h-52 overflow-hidden
              ${index % 2 == 0 ? "md:flex-row-reverse" : ""}`}
             >
               <div
@@ -230,7 +221,7 @@ export default function Events() {
             <div
             key={index}
             className={`flex md:flex-row flex-col-reverse items-center  md:items-center gap-8 md:justify-end
-           md:my-4 my-12   
+           md:my-4 my-12  md:h-52 
            ${index % 2 == 0 ? "md:flex-row-reverse" : ""}`}
           >
             <div
