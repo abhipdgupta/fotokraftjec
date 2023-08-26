@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import EventsList from "@/lib/eventsLists";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
+import { ScrollTrigger } from "gsap/all";
 export default function Events() {
   const section3 = useRef<HTMLDivElement>(null);
   const yr1 = useRef<HTMLDivElement>(null);
@@ -36,8 +37,8 @@ export default function Events() {
             start: "top 80%",
             end: "bottom 80%",
             scrub: false,
-            toggleActions:"play none none reverse"
-            // markers:true
+            toggleActions:"play none none reverse",
+            markers:true
           },
         }
       );
@@ -55,8 +56,8 @@ export default function Events() {
             start: "top 80%",
             end: "bottom 80%",
             scrub: false,
-            toggleActions:"play none none reverse"
-            // markers:true
+            toggleActions:"play none none reverse",
+            markers:true
           },
         }
       );
@@ -88,8 +89,8 @@ export default function Events() {
             start: "top 80%",
             end: "bottom 80%",
             scrub: false,
-            toggleActions:"play none none reverse"
-            // markers:true
+            toggleActions:"play none none reverse",
+            markers:true
           },
           
         }
@@ -109,8 +110,8 @@ export default function Events() {
             start: "top 80%",
             end: "bottom 80%",
             scrub: false,
-            toggleActions:"play none none reverse"
-            // markers:true
+            toggleActions:"play none none reverse",
+            markers:true
           },
         }
       );
@@ -152,7 +153,15 @@ export default function Events() {
     );
   }, []);
 
-  
+//   useEffect(()=>{
+//     const t=setInterval(()=>{
+//         ScrollTrigger.refresh()
+//     },2000)
+
+//     return ()=>{
+//         clearInterval(t)
+//     }
+//   },[section3.current])
   return (
     <>
       <section

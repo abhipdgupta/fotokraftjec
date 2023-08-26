@@ -2,6 +2,7 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollToPlugin, ScrollTrigger, Flip } from "gsap/all";
+import { debounce } from "lodash"
 
 import Navbar from "@/components/navbar";
 import Hero from "@/components/sections/hero";
@@ -12,24 +13,34 @@ import Leads from "@/components/sections/leads";
 import Footer from "@/components/footer";
 import FotokraftIntroVideo from "@/components/fotokraftIntroVideo";
 export default function Home() {
-  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, Flip);
-
   //import code to make gsap work with dynamic rendering div like using maps etc.
-
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, Flip);
   const heightref = useRef<HTMLDivElement>(null);
-  const [height, setheight] = useState(heightref.current?.offsetHeight);
 
-  const refreshScrollTrigger = () => {
-    const newHeight = heightref.current?.offsetHeight;
-    setheight(newHeight);
-    console.log("refreshing...scroll trigger", height);
-    ScrollTrigger.refresh();
-  };
-  useEffect(() => {
-    if (heightref.current) {
-      refreshScrollTrigger();
+  const [height,setHeight]=useState(0);
+
+  useEffect(()=>{
+
+    console.log("height",height);
+    console.log("heightref",heightref.current?.offsetHeight);
+    
+    
+    if(heightref.current){
+        
+
+        if(height<heightref.current?.offsetHeight){
+            ScrollTrigger.refresh();
+            console.log("scrollTrigger refreshing...");
+            setHeight(heightref.current?.offsetHeight)
+            
+        }
     }
-  }, [height]);
+
+   
+
+  },[height])
+
+    
 
   return (
     <div ref={heightref} className="select-none ">
