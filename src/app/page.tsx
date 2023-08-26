@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollToPlugin, ScrollTrigger, Flip, Draggable } from "gsap/all";
 
@@ -17,7 +17,7 @@ export default function Home() {
   //import code to make gsap work with dynamic rendering div like using maps etc.
 
   const heightref = useRef<HTMLDivElement>(null);
-  const [height, setheight] = useState(0);
+  const [height, setheight] = useState(heightref.current?.offsetHeight );
   useEffect(() => {
     if (heightref.current) {
       const newHeight = heightref.current.offsetHeight;
@@ -25,7 +25,6 @@ export default function Home() {
       console.log("refreshing...scroll trigger",height);
       ScrollTrigger.refresh();
     }
-    
   }, [height]);
 
   return (

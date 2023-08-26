@@ -69,7 +69,7 @@ export default function Events() {
     const yr2odd: any = Array.from(yr2.current!.childNodes).filter(
       (child, index) => index % 2 == 0
     );
-    console.log(yr2odd);
+   
 
     const yr2even: any = Array.from(yr2.current!.childNodes).filter(
       (child, index) => index % 2 !== 0
@@ -152,6 +152,7 @@ export default function Events() {
     );
   }, []);
 
+  
   return (
     <>
       <section
