@@ -1,7 +1,6 @@
+"use client";
 import { gsap } from "gsap";
 import React, { useLayoutEffect, useRef } from "react";
-
-import { ScrollToPlugin } from "gsap/all";
 
 export default function Navbar() {
   const navref1 = useRef<HTMLDivElement>(null);
@@ -33,14 +32,13 @@ export default function Navbar() {
       className=" w-full flex items-center justify-around h-20 fixed z-10"
     >
       <NavItem to="#home">
-
         <img
           src="/Fotokraft 1.svg"
           className="w-10 object-scale-down"
           alt="Fotokraft logo"
         />
       </NavItem>
-      
+
       <div
         ref={navref2}
         className="flex items-center justify-evenly gap-6 h-full"
@@ -52,7 +50,6 @@ export default function Navbar() {
         <NavItem to="#leads">Leads</NavItem>
       </div>
       <NavItem to="#home">
-
         <img
           src="/JEC_logo_.png"
           className="w-10 object-scale-down"
@@ -64,7 +61,6 @@ export default function Navbar() {
 }
 
 function NavItem({ children, to }: { children: React.ReactNode; to: string }) {
- 
   const scrollanimate = (to: any) => {
     gsap.to(window, {
       duration: 1,

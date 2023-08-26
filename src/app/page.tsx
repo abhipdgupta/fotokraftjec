@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import { ScrollToPlugin, ScrollTrigger, Flip, Draggable } from "gsap/all";
+import { ScrollToPlugin, ScrollTrigger, Flip } from "gsap/all";
 
 import Navbar from "@/components/navbar";
 import Hero from "@/components/sections/hero";
@@ -12,30 +12,32 @@ import Leads from "@/components/sections/leads";
 import Footer from "@/components/footer";
 import FotokraftIntroVideo from "@/components/fotokraftIntroVideo";
 export default function Home() {
-  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, Flip, Draggable);
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, Flip);
 
   //import code to make gsap work with dynamic rendering div like using maps etc.
 
   const heightref = useRef<HTMLDivElement>(null);
-  const [height, setheight] = useState(heightref.current?.offsetHeight );
+  const [height, setheight] = useState(heightref.current?.offsetHeight);
+
+  const refreshScrollTrigger = () => {
+    const newHeight = heightref.current?.offsetHeight;
+    setheight(newHeight);
+    console.log("refreshing...scroll trigger", height);
+    ScrollTrigger.refresh();
+  };
   useEffect(() => {
     if (heightref.current) {
-      const newHeight = heightref.current.offsetHeight;
-      setheight(newHeight);
-      console.log("refreshing...scroll trigger",height);
-      ScrollTrigger.refresh();
+      refreshScrollTrigger();
     }
   }, [height]);
 
   return (
-    <div ref={heightref} className="select-none">
+    <div ref={heightref} className="select-none ">
       <Navbar />
       <div className="min-h-screen overflow-y-scroll no-scrollbar  bg-slate-950 overflow-hidden">
         <Hero />
-
         <About />
         <Events />
-        {/* <Joinform/> */}
         <Leads />
         <Footer />
       </div>

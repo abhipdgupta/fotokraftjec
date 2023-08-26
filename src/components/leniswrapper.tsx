@@ -10,10 +10,8 @@ export default function Leniswrapper({
 }: {
   children: React.ReactNode;
 }) {
-  const lenis = new Lenis({});
-  console.log("hi");
-  
   useEffect(() => {
+    const lenis = new Lenis({});
     lenis.on("scroll", ScrollTrigger.update);
 
     const func1 = (time: any) => {

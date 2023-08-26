@@ -1,3 +1,4 @@
+"use client"
 import React, { useState, useRef } from "react";
 import messages from "@/lib/messageByLeads";
 import { Flip } from "gsap/all";
