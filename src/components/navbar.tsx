@@ -96,7 +96,7 @@ export default function Navbar() {
   return (
     <nav
       ref={navref1}
-      className="w-full flex items-center justify-around  fixed z-10 py-1 bg-slate-950 backdrop-blur-sm bg-opacity-40"
+      className="w-full flex items-center justify-around  fixed z-20 py-1 bg-slate-950 backdrop-blur-sm bg-opacity-40"
     >
       <NavItem to="#home">
         <img
@@ -141,10 +141,10 @@ export default function Navbar() {
 
       <div
         ref={mobileMenu}
-        className="absolute h-screen w-full top-0 left-0 flex "
+        className="absolute w-full top-0 left-0 flex "
       >
         {showMenu && (
-          <div className=" bg-slate-700 flex flex-col items-center justify-center  font-semibold   w-full  text-black ">
+          <div className=" bg-slate-700 h-screen flex flex-col items-center justify-center  font-semibold   w-full  text-black ">
             <div
               onClick={() => {
                 setShowMenu(!showMenu);
