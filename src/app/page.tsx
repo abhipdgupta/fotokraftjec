@@ -1,9 +1,7 @@
 "use client";
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
+import React, {  useRef} from "react";
 import { gsap } from "gsap";
 import { ScrollToPlugin, ScrollTrigger, Flip } from "gsap/all";
-import { debounce } from "lodash"
-
 import Navbar from "@/components/navbar";
 import Hero from "@/components/sections/hero";
 import About from "@/components/sections/about";
@@ -13,34 +11,12 @@ import Leads from "@/components/sections/leads";
 import Footer from "@/components/footer";
 import FotokraftIntroVideo from "@/components/fotokraftIntroVideo";
 export default function Home() {
-  //import code to make gsap work with dynamic rendering div like using maps etc.
+ 
+  // NOTE: give fix or min height to the div elements whose size is not define during renders like images
+  // if it is not loaded it will not contribute to the size rather give a height unless gsap wonot work properly
+
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, Flip);
   const heightref = useRef<HTMLDivElement>(null);
-
-  const [height,setHeight]=useState(0);
-
-//   useEffect(()=>{
-
-//     console.log("height",height);
-//     console.log("heightref",heightref.current?.offsetHeight);
-    
-    
-//     if(heightref.current){
-        
-
-//         if(height<heightref.current?.offsetHeight){
-//             ScrollTrigger.refresh();
-//             console.log("scrollTrigger refreshing...");
-//             setHeight(heightref.current?.offsetHeight)
-            
-//         }
-//     }
-
-   
-
-//   },[height])
-
-    
 
   return (
     <div ref={heightref} className="select-none ">

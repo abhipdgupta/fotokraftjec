@@ -108,7 +108,7 @@ export default function Hero() {
         </h1>
         <span
           ref={subtext}
-          className="absolute z-10 font-extrabold text-xs text-gray-300 lg:tracking-[.4rem] cursor-pointer"
+          className="absolute  font-extrabold text-xs text-gray-300 lg:tracking-[.4rem] cursor-pointer"
         >
           <Link
             href={"https://jecassam.ac.in/student-activity/fotokraft/"}
