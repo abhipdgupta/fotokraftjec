@@ -164,7 +164,7 @@ export default function Events() {
           </h1>
           <img
             className="absolute top-0 left-0 h-full w-full object-cover"
-            src="https://scontent.fmaa8-1.fna.fbcdn.net/v/t39.30808-6/343607396_3391924807788881_6900563496403258772_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=730e14&_nc_ohc=pQHnyQ4Ap2YAX-HeMha&_nc_ht=scontent.fmaa8-1.fna&oh=00_AfCiU-IVBCsEFVazk4o5x1EbpIdwYPi_sRGPTmGOYkQhdQ&oe=64ECE45B"
+            src="/events/2023/workshop.jpg"
             alt=""
           />
         </div>
@@ -210,7 +210,7 @@ export default function Events() {
           </h1>
           <img
             className="absolute top-0 left-0 h-full w-full object-cover"
-            src="https://scontent.fmaa8-1.fna.fbcdn.net/v/t39.30808-6/271103913_2606332342831662_6711318599927837598_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=a26aad&_nc_ohc=X_BGzbzVOTkAX80t4p2&_nc_ht=scontent.fmaa8-1.fna&oh=00_AfCcQq4brv2m_xCMlq2AeexuHwkkx9SoQRAvAUNHkBsCfA&oe=64EB8CAD"
+            src="/events/2023/workshop.jpg"
             alt=""
           />
         </div>
