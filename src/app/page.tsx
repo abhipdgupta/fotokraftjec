@@ -9,7 +9,8 @@ import Events from "@/components/sections/events";
 import Joinform from "@/components/sections/joinform";
 import Leads from "@/components/sections/leads";
 import Footer from "@/components/footer";
-import FotokraftIntroVideo from "@/components/fotokraftIntroVideo";
+import JoinQR from "@/components/sections/qr";
+
 export default function Home() {
  
   // NOTE: give fix or min height to the div elements whose size is not define during renders like images
@@ -26,6 +27,7 @@ export default function Home() {
         <About />
         <Events />
         <Leads />
+        <JoinQR/>
         <Footer />
       </div>
     </div>

@@ -113,7 +113,7 @@ export default function Navbar() {
         <NavItem to="#about">About</NavItem>
         <NavItem to="#events">Events</NavItem>
         <NavItem to="#leads">Leads</NavItem>
-        <NavItem to="#gallery">Gallery</NavItem>
+        <NavItem to="#join-club">Join</NavItem>
        
       </div>
 
@@ -155,7 +155,6 @@ export default function Navbar() {
               <NavItem to="#about">About</NavItem>
               <NavItem to="#events">Events</NavItem>
               <NavItem to="#leads">Leads</NavItem>
-              <NavItem to="#gallery">Gallery</NavItem>
               <NavItem to="#join-club">Join?</NavItem>
             </div>
           </div>

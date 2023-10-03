@@ -37,7 +37,7 @@ export default function Hero() {
     // @ts-ignore
     const children_: any = socials.current?.children;
 
-    t1.fromTo(children_, { x: "-300%" }, { x: "0", stagger: 0.1 });
+    t1.fromTo(children_, { x: "300%" }, { x: "0", stagger: 0.1 });
   }, []);
 
   useEffect(() => {
