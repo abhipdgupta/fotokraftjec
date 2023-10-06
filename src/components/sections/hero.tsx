@@ -118,7 +118,7 @@ export default function Hero() {
           </Link>
         </span>
         <div ref={camera} className="">
-          <img src="/camera_10.png" className="object-cove  " alt="" />
+          <img src="/camera.png" className="object-cove  " alt="" />
         </div>
         {/* <div
           className="border-2 rounded-full w-12 h-12 flex items-center justify-center cursor-pointer z-40

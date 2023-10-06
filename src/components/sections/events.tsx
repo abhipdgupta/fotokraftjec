@@ -153,26 +153,22 @@ export default function Events() {
 
   return (
     <>
-      <section
-        ref={section3}
-        id="events"
-        className="min-h-screen py-16 container "
-      >
-        <div ref={heroyr1} className="relative h-screen container text-white  ">
+      <section ref={section3} id="events" className="min-h-screen py-16">
+        <div ref={heroyr1} className="relative h-screen  text-white  ">
           <h1 className="absolute lg:text-9xl md:text-6xl text-3xl lg:font-extralight font-bold top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
             Year 2023
           </h1>
           <img
-            className="absolute top-0 left-0 h-full w-full object-cover"
-            src="/events/2023/workshop.jpg"
+            className="absolute top-0 left-0 h-screen w-full object-cover"
+            src="/events/2023/hero.jpg"
             alt=""
           />
         </div>
-        <div ref={yr1} className="py-12 max-w-6xl mx-auto">
+        <div ref={yr1} className="py-12 max-w-6xl mx-auto container">
           {EventsList.yr2023.map((evn, index) => (
             <div
               key={index}
-              className={`flex md:flex-row flex-col-reverse items-center  md:items-center gap-8 md:justify-end
+              className={`flex md:flex-row flex-col-reverse items-center  md:items-center gap-8 md:justify-end  sm:py-36 py-8
            md:my-4 my-12  md:h-52 
            ${index % 2 == 0 ? "md:flex-row-reverse" : ""}`}
             >
@@ -193,7 +189,7 @@ export default function Events() {
                 </div>
                 <h3 className="text-slate-300">{evn.description}</h3>
               </div>
-              <div className="w-96">
+              <div className="max-w-[384px] w-full">
                 <img
                   src={evn.thumbnail}
                   alt={evn.name}
@@ -204,21 +200,21 @@ export default function Events() {
           ))}
         </div>
 
-        <div ref={heroyr2} className=" relative h-screen container text-white ">
+        <div ref={heroyr2} className="relative h-screen  text-white  ">
           <h1 className="absolute lg:text-9xl md:text-6xl text-3xl lg:font-extralight font-bold top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
             Year 2022
           </h1>
           <img
-            className="absolute top-0 left-0 h-full w-full object-cover"
-            src="/events/2023/workshop.jpg"
+             className="absolute top-0 left-0 h-screen w-full object-cover"
+            src="/events/2022/hero.jpg"
             alt=""
           />
         </div>
-        <div ref={yr2} className="py-12 max-w-6xl mx-auto">
+        <div ref={yr2} className="py-12 max-w-6xl mx-auto container">
           {EventsList.yr2022.map((evn, index) => (
             <div
               key={index}
-              className={`flex md:flex-row flex-col-reverse items-center  md:items-center gap-8 md:justify-end
+              className={`flex md:flex-row flex-col-reverse items-center  md:items-center gap-8 md:justify-end sm:py-36 py-8
            md:my-4 my-12  md:h-52 
            ${index % 2 == 0 ? "md:flex-row-reverse" : ""}`}
             >
@@ -239,7 +235,7 @@ export default function Events() {
                 </div>
                 <h3 className="text-slate-300">{evn.description}</h3>
               </div>
-              <div className="w-96">
+              <div className="max-w-[384px] w-full">
                 <img
                   src={evn.thumbnail}
                   alt={evn.name}

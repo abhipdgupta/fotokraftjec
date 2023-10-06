@@ -17,19 +17,19 @@ const EventsList: EventsByYear = {
     {
       name: "Phoenix'23",
       description: "Annual Tech Fest of JEC covered by fotokraft year 2023",
-      thumbnail: `/events/2023/workshop.jpg`,
+      thumbnail: `/events/2023/phoenix.jpg`,
       album: "",
     },
     {
       name: "CreatriX'23",
       description: "Annual Photography competiton held all over the state",
-      thumbnail: `/events/2023/workshop.jpg`,
+      thumbnail: `/events/2023/creatrix.jpg`,
       album: "",
     },
     {
       name: "PhotoWalk",
       description: "",
-      thumbnail: `/events/2023/workshop.jpg`,
+      thumbnail: `/events/2023/photowalk.jpg`,
       album: "",
     },
     {
@@ -43,32 +43,32 @@ const EventsList: EventsByYear = {
     {
       name: "Phoenix'22",
       description: "Annual Tech Fest of JEC covered by fotokraft year 2022",
-      thumbnail: `/events/2023/workshop.jpg`,
+      thumbnail: `/events/2022/phoenix.jpg`,
       album: "",
     },
     {
       name: "CreatriX'22",
       description: "Annual Photography competiton held all over the state ",
-      thumbnail: `/events/2023/workshop.jpg`,
+      thumbnail: `/events/2022/creatrix.jpg`,
       album: "",
     },
     {
       name: "College Week",
       description:
         "Withness the fun and joy college week as we cover the competitons and engagement . ",
-      thumbnail: `/events/2023/workshop.jpg`,
+      thumbnail: `/events/2022/college_week.jpg`,
       album: "",
     },
     {
       name: "Short Film Making Competiton",
       description: "Showcase your passion and story through a short film",
-      thumbnail: `/events/2023/workshop.jpg`,
+      thumbnail: `/events/2022/short_film_making_competition.jpg`,
       album: "",
     },
     {
       name: "Photo Exibition",
       description: "Showcasing all of your creative works",
-      thumbnail: `/events/2023/workshop.jpg`,
+      thumbnail: `/events/2022/photo_exhibition.jpg`,
       album: "",
     },
     {
